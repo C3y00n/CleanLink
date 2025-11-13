@@ -1,11 +1,9 @@
-/* Universal selector */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Element selectors */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f7fa;
@@ -17,7 +15,6 @@ h1, h2 {
   margin-bottom: 10px;
 }
 
-/* Header & navigation */
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
@@ -50,7 +47,6 @@ nav ul li a {
   font-size: 0.95rem;
 }
 
-/* Hover + active links */
 nav ul li a:hover {
   background-color: #1DA1F2;
   color: #ffffff;
@@ -61,7 +57,6 @@ nav ul li a.active {
   border-bottom: 2px solid #1DA1F2;
 }
 
-/* Main layout */
 main {
   padding: 20px;
 }
@@ -74,7 +69,6 @@ main {
   margin-top: 15px;
 }
 
-/* Buttons */
 .btn,
 .btn-outline {
   display: inline-block;
@@ -95,13 +89,11 @@ main {
   color: #1DA1F2;
 }
 
-/* Features list */
 .features ul {
   margin-top: 8px;
   padding-left: 18px;
 }
 
-/* Tables */
 .services-table,
 .bookings-table,
 .providers-table {
@@ -121,17 +113,14 @@ main {
   padding: 8px;
 }
 
-/* Descendant selector */
 table tr:nth-child(even) {
   background-color: #eef7ff;
 }
 
-/* Child selector */
 main > h1 {
   margin-bottom: 5px;
 }
 
-/* Attribute selector */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -144,7 +133,6 @@ textarea {
   border-radius: 4px;
 }
 
-/* Form card */
 .form-card {
   max-width: 500px;
   margin: 20px auto;
@@ -167,7 +155,8 @@ textarea {
   margin-top: 3px;
 }
 
-/* Footer */
+
+
 footer {
   margin-top: 30px;
   padding: 12px 20px;
@@ -177,7 +166,8 @@ footer {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Responsive layout */
+
+
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;

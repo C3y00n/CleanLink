@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>CleanLink - Book Service</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="logo">
+    <img src="assets/img/cleanLink2NoBG.png" alt="CleanLink logo">
+    <span>CleanLink</span>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="book.html" class="active">Book Service</a></li>
+      <li><a href="provider.html">Become a Provider</a></li>
+      <li><a href="bookings.html">My Bookings</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Book a Service</h1>
+  <p>Fill in the form below to request a service. This demo sends data to httpbin.org for testing.</p>
+
+  <form action="https://httpbin.org/get" method="get" class="form-card">
+
+    <label>Full Name:
+      <input type="text" name="name" required>
+    </label>
+
+
+    <label>Phone Number:
+      <input type="tel" name="phone" required>
+    </label>
+
+
+    <label>Select Service:
+      <select name="service">
+        <option value="car_wash">Car Wash</option>
+        <option value="laundry">Laundry</option>
+        <option value="home_cleaning">Home Cleaning</option>
+      </select>
+    </label>
+
+
+    <label>Date:
+      <input type="date" name="date" required>
+    </label>
+
+
+    <label>Preferred Time:
+      <input type="time" name="time" required>
+    </label>
+
+
+    <label>Extras:</label>
+    <label><input type="checkbox" name="extra" value="pickup"> Pickup</label>
+    <label><input type="checkbox" name="extra" value="express"> Express Service</label>
+
+
+    <label>Notes:
+      <textarea name="notes" rows="3"></textarea>
+    </label>
+
+    
+    <button type="submit">Submit Booking</button>
+  </form>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 CleanLink. All rights reserved.</p>
+</footer>
+</body>
+</html>

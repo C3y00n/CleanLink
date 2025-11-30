@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CleanLink - Questionnaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <img src="assets/img/cleanLink2NoBG.png" style="width:45px; height:45px;">
+    <a class="navbar-brand fw-bold" href="index.html">CleanLink</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="book.html">Book</a></li>
+        <li class="nav-item"><a class="nav-link" href="provider.html">Providers</a></li>
+        <li class="nav-item"><a class="nav-link" href="bookings.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link active" href="questionnaire.html">Questionnaire</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculate</a></li>
+        <li class="nav-item"><a class="nav-link" href="fun.html">Fun</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+  <h1 class="mb-3">Customer Questionnaire</h1>
+  <p class="text-muted">
+    Please answer the questions below to help us improve CleanLink.
+  </p>
+
+  <div id="questionnaireAlert" class="alert d-none"></div>
+
+  <form id="questionnaireForm" class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label" for="qName">Name</label>
+      <input type="text" id="qName" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="qEmail">Email</label>
+      <input type="email" id="qEmail" class="form-control">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label d-block">How satisfied are you with the booking process?</label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="qRating" id="rate1" value="1">
+        <label class="form-check-label" for="rate1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="qRating" id="rate2" value="2">
+        <label class="form-check-label" for="rate2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="qRating" id="rate3" value="3">
+        <label class="form-check-label" for="rate3">3</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="qRating" id="rate4" value="4">
+        <label class="form-check-label" for="rate4">4</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="qRating" id="rate5" value="5">
+        <label class="form-check-label" for="rate5">5</label>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="qServiceType">Which service did you use?</label>
+      <select id="qServiceType" class="form-select">
+        <option value="">Choose...</option>
+        <option>Car Wash</option>
+        <option>Laundry</option>
+        <option>Home Cleaning</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label" for="qRecommend">Would you recommend CleanLink?</label>
+      <select id="qRecommend" class="form-select">
+        <option value="">Choose...</option>
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <label class="form-label" for="qComments">Any comments or suggestions?</label>
+      <textarea id="qComments" rows="3" class="form-control"></textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit Questionnaire</button>
+    </div>
+  </form>
+</main>
+
+<footer class="bg-white border-top py-3 mt-4">
+  <div class="container text-center text-muted">
+    &copy; 2025 CleanLink.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

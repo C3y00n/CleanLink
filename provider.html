@@ -1,61 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CleanLink - Provider Registration</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <title>CleanLink - Providers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
 </head>
-<body>
-<header>
-  <div class="logo">
-    <img src="assets/img/cleanLink2NoBG.png" alt="CleanLink logo">
-    <span>CleanLink</span>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <img src="assets/img/cleanLink2NoBG.png" style="width:45px; height:45px;">
+    <a class="navbar-brand fw-bold" href="index.html">CleanLink</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="book.html">Book</a></li>
+        <li class="nav-item"><a class="nav-link active" href="provider.html">Providers</a></li>
+        <li class="nav-item"><a class="nav-link" href="bookings.html">Bookings</a></li>
+        <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
+        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculate</a></li>
+        <li class="nav-item"><a class="nav-link" href="fun.html">Fun</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="book.html">Book Service</a></li>
-      <li><a href="provider.html" class="active">Become a Provider</a></li>
-      <li><a href="bookings.html">My Bookings</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+</nav>
 
-<main>
-  <h1>Provider Registration</h1>
-  <p>Register your business to receive bookings through CleanLink.</p>
+<main class="container my-4">
+  <h1 class="mb-3">Service Provider Registration (Demo)</h1>
+  <p class="text-muted">This page simulates how new providers could register to join CleanLink.</p>
 
-  <form action="#" method="post" class="form-card">
-    <label>Business Name:
-      <input type="text" name="business" required>
-    </label>
-
-    <label>Service Type:</label>
-    <label><input type="radio" name="type" value="car_wash" required> Car Wash</label>
-    <label><input type="radio" name="type" value="laundry"> Laundry</label>
-    <label><input type="radio" name="type" value="home_cleaning"> Home Cleaning</label>
-
-    <label>City:
-      <input type="text" name="city">
-    </label>
-
-    <label>Starting Price (OMR):
-      <input type="number" name="price" min="0" step="0.1">
-    </label>
-
-    <label>Business Email:
-      <input type="email" name="email" required>
-    </label>
-
-    <button type="submit">Submit Application</button>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label class="form-label" for="provName">Provider Name</label>
+      <input type="text" id="provName" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="provCity">City</label>
+      <input type="text" id="provCity" class="form-control" required>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="provService">Service Type</label>
+      <select id="provService" class="form-select">
+        <option>Car Wash</option>
+        <option>Laundry</option>
+        <option>Home Cleaning</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="provPhone">Phone</label>
+      <input type="tel" id="provPhone" class="form-control">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit (Demo)</button>
+    </div>
   </form>
 </main>
 
-<footer>
-  <p>&copy; 2025 CleanLink. All rights reserved.</p>
+<footer class="bg-white border-top py-3 mt-4">
+  <div class="container text-center text-muted">
+    &copy; 2025 CleanLink.
+  </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>

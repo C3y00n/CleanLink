@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CleanLink - Services</title>
+  <title>CleanLink - Calculate Cost</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -22,12 +22,12 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="book.html">Book</a></li>
         <li class="nav-item"><a class="nav-link" href="provider.html">Providers</a></li>
         <li class="nav-item"><a class="nav-link" href="bookings.html">Bookings</a></li>
         <li class="nav-item"><a class="nav-link" href="questionnaire.html">Questionnaire</a></li>
-        <li class="nav-item"><a class="nav-link" href="calculate.html">Calculate</a></li>
+        <li class="nav-item"><a class="nav-link active" href="calculate.html">Calculate</a></li>
         <li class="nav-item"><a class="nav-link" href="fun.html">Fun</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -37,49 +37,47 @@
 </nav>
 
 <main class="container my-4">
-  <h1 class="mb-3">Our Services</h1>
+  <h1 class="mb-3">Estimate Your Cleaning Cost</h1>
+  <p class="text-muted">Use this simple calculator to estimate the total cost for your booking.</p>
 
-  <div class="row mb-3">
+  <form id="calcForm" class="row g-3">
     <div class="col-md-6">
-      <label for="serviceSearch" class="form-label">Search services</label>
-      <input type="text" id="serviceSearch" class="form-control"
-             placeholder="Search by name or category">
+      <label class="form-label" for="calcService">Service Type</label>
+      <select id="calcService" class="form-select" required>
+        <option value="car">Car Wash (base 7 OMR)</option>
+        <option value="laundry">Laundry (base 5 OMR)</option>
+        <option value="home">Home Cleaning (base 12 OMR)</option>
+      </select>
     </div>
-  </div>
-
-  <div class="table-responsive mb-4">
-    <table id="servicesTable" class="table table-striped table-bordered">
-      <thead class="table-primary">
-      <tr>
-        <th>#</th>
-        <th>Service</th>
-        <th>Category</th>
-        <th>Price (OMR)</th>
-      </tr>
-      </thead>
-      <tbody id="servicesBody">
-      </tbody>
-    </table>
-  </div>
-
-  <h2 class="h4 mb-3">Add New Service (Demo)</h2>
-  <form id="addServiceForm" class="row g-3">
-    <div class="col-md-4">
-      <label class="form-label" for="newServiceName">Service Name</label>
-      <input type="text" id="newServiceName" class="form-control" required>
+    <div class="col-md-6">
+      <label class="form-label" for="calcQuantity">Quantity / Units</label>
+      <input id="calcQuantity" type="number" min="1" value="1"
+             class="form-control" required>
     </div>
-    <div class="col-md-4">
-      <label class="form-label" for="newServiceCategory">Category</label>
-      <input type="text" id="newServiceCategory" class="form-control" required>
+    <div class="col-md-6">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="calcUrgent">
+        <label class="form-check-label" for="calcUrgent">
+          Urgent service (20% extra)
+        </label>
+      </div>
     </div>
-    <div class="col-md-2">
-      <label class="form-label" for="newServicePrice">Price</label>
-      <input type="number" step="0.1" id="newServicePrice" class="form-control" required>
+    <div class="col-md-6">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="calcDiscount">
+        <label class="form-check-label" for="calcDiscount">
+          Loyal customer (15% discount)
+        </label>
+      </div>
     </div>
-    <div class="col-md-2 d-flex align-items-end">
-      <button class="btn btn-success w-100" type="submit">Add</button>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Calculate</button>
     </div>
   </form>
+
+  <div class="alert alert-info mt-3" id="calcResult">
+    Estimated total: -
+  </div>
 </main>
 
 <footer class="bg-white border-top py-3 mt-4">
